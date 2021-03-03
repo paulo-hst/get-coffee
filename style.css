@@ -1,5 +1,15 @@
+/* imports -------------------------- */
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap');
 
+/* variables -------------------------- */
+:root{
+    --black: #024242;
+    --yellow: #FCA60F;
+    --yellow-hover: #cf8300;
+    --brown: #C95E20;
+}
+
+/* resets -------------------------- */
 *{
     margin: 0;
     padding: 0;
@@ -12,6 +22,7 @@ body{
     font-family: 'Nunito', sans-serif;
 }
 
+/* header -------------------------- */
 .header-wrapper{
     box-shadow: 0px 0px 10px #aaa;
 }
@@ -25,7 +36,6 @@ header{
     align-items: center;
 
 }
-
 header ul{
     display: flex;
 }
@@ -34,6 +44,75 @@ header ul li{
 }
 header ul li a{
     margin: 10px 20px;
-    color: #242424;
+    color: var(--black);
     font-weight: 600;
+}
+
+/* main -------------------------- */
+.main-wrapper{
+    
+}
+main{
+    height: 500px;
+    max-width: 900px;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background: url(assets/forma2.svg); */
+}
+
+.welcome{
+    max-width: 400px;
+    color: var(--black);
+}
+.welcome h2{
+    font-size: 1.7rem;
+}
+.welcome button{
+    width: 250px;
+    height: 50px;
+
+    background: var(--yellow);
+    color: white;
+
+    font-size: 1.3rem;
+    font-weight: bold;
+    font-family: 'Nunito', sans-serif;
+
+    border: none;
+    border-radius: 5px;
+
+    margin-top: 70px;
+    outline: none;
+}
+
+.welcome button:hover{
+    opacity: 0.9;
+    background: var(--yellow-hover);
+}
+
+.social{
+    width: 300px;
+    margin: 30px 5px;
+}
+
+.social img{
+    padding: 0px 5px;
+}
+.image{
+    padding: 0px 50px;
+}
+.image img{    
+    height: 270px;
+    margin-top: -90px;
+}
+
+/* main -------------------------- */
+.scroll{
+    text-align: center;
+}
+.scroll p{
+    font-weight: bold;
 }
