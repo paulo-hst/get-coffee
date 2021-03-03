@@ -29,7 +29,7 @@ body{
 header{
     max-width: 900px;
     margin: 0 auto; 
-    height: 80px;
+    min-height: 80px;
 
     display: flex;
     justify-content: space-between;
@@ -49,8 +49,11 @@ header ul li a{
 }
 
 /* main -------------------------- */
-.main-wrapper{
-    
+.main-wrapper{    
+    background: url(assets/forma1.svg) 50px no-repeat fixed, 
+                url(assets/forma2.svg) 800px no-repeat fixed;
+    /* background-position: 300px; */
+    background-size: 300px, 500px, auto;    
 }
 main{
     height: 500px;
@@ -60,7 +63,6 @@ main{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* background: url(assets/forma2.svg); */
 }
 
 .welcome{
@@ -109,6 +111,10 @@ main{
     margin-top: -90px;
 }
 
+.social-mobile{
+    display: none;
+}
+
 /* main -------------------------- */
 .scroll{
     text-align: center;
@@ -116,3 +122,86 @@ main{
 .scroll p{
     font-weight: bold;
 }
+
+
+/* mobile -------------------------- */
+@media screen and (max-width: 570px){
+
+    .header-wrapper{
+    }
+    header{
+        display: block;
+        text-align: center;
+    }
+    .logo{        
+        padding-top: 18px;
+    }
+    .logo img{        
+        width: 40%;
+    }
+    header ul{
+        padding: 10px;
+    }
+    header ul li{
+        margin: auto;
+    }
+    .image{
+        display: none;
+    }
+    
+    main{
+        min-height: 100%;
+    }
+    
+    .welcome{        
+        margin: 0 auto;
+        margin-top: -100px;
+        text-align: center;
+    }
+    .welcome h2{
+        font-size: 1.2rem;
+        padding: 19px;
+        margin-top: 0px;
+    }
+    .welcome button{
+        font-size: 1rem;
+        margin-top: 30px;
+        height: 40px;
+        width: 220px;
+    }
+    
+    .welcome button:hover{
+        opacity: 0.9;
+        background: var(--yellow-hover);
+    }
+    
+    .social{
+        display: none;
+    }
+    
+    .image{
+        padding: 0px 50px;
+    }
+    .image img{    
+        height: 270px;
+        margin-top: -90px;
+    }
+    .scroll{
+        display: none;
+    }
+
+    .social-mobile{
+        display: flex;        
+        justify-content: center;
+        align-items: center;
+    }
+
+    .social-mobile img{
+        padding: 0px 5px;
+    }
+}
+
+@media screen and (max-width: 400px){
+
+}
+
