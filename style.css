@@ -7,6 +7,7 @@
     --yellow: #FCA60F;
     --yellow-hover: #cf8300;
     --brown: #C95E20;
+    --white: #f5f5f5;
 }
 
 /* resets -------------------------- */
@@ -63,7 +64,7 @@ header{
 
 }
 header .logo{
-    animation: 0.5s ease-in-out 0s 1 logoShake;
+    animation: 0.5s ease-in-out 2s 2 logoShake;
 }
 header ul{
     display: flex;
@@ -135,8 +136,19 @@ main{
 }
 
 .social{
+    animation: 1.5s ease-out 0s 1 slideWelcome;
     width: 300px;
     margin: 30px 5px;
+}
+
+.dark-mode-span{
+    position: absolute;
+    margin-left: 120px;
+    margin-top: 5px;
+}
+.dark-mode{
+    height: 17px;
+    width: 17px;
 }
 
 .social img{
@@ -234,6 +246,11 @@ main{
         display: none;
     }
     
+    .dark-mode-span{
+        position: absolute;
+        margin-left: 125px;
+        margin-top: 7px;
+    }
     .image{
         padding: 0px 50px;
     }
@@ -264,32 +281,25 @@ main{
 }
 
 /* darkmode -------------------------- */
-body{
-    background: var(--black);
+.dark-body{
+    background: #146b6b;
 }
-.header-wrapper{
+.dark-header-wrapper{
     background: var(--black);
-    box-shadow: 0px 0px 10px #00f;
+    box-shadow: 0px 0px 10px #888;
 }
-.logo img{
+.dark-logo-img{
     filter: invert(100%);
 }
-header ul li a{
-    color: white;
-}
-.main-wrapper{
-    background: #146b6b;
-    color: white;
-}
-.main-wrapper{
-    background: #004e4e;
-}
-.welcome{
+.dark-link{
     color: var(--white);
 }
-.social{
-    filter: invert(0.8);
+.dark-welcome{
+    color: var(--white);
 }
-.scroll{
+.dark-social{
+    filter: brightness(8);
+}
+.dark-scroll{
     filter: invert(0.8);
 }
